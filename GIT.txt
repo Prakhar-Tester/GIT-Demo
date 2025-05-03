@@ -1,0 +1,258 @@
+-https://git-scm.com/book/en/v2
+
+
+
+https://www.youtube.com/watch?v=-aOtytNgL80&list=PLL34mf651faO4IjVNu8LRoN6QOxYM6VlZ 1 D
+
+https://www.youtube.com/watch?v=B8NurikxEo8&list=PLhW3qG5bs-L_Ct3lEPOdgwmrfmyVPd7PT 2 D
+
+https://www.youtube.com/watch?v=ylEy4eLdhFs&list=PLhW3qG5bs-L-u2VOoDDAIC_Qe3xv43rNx 3
+
+https://www.youtube.com/watch?v=Hx-pu3m7Pjg&list=PL6tu16kXT9PqIcfMOE9hX81cVOnmiM1E2 4
+
+https://www.youtube.com/watch?v=-U-eUHI6euM&list=PLhW3qG5bs-L8OlICbNX9u4MZ3rAt5c5GG 5		
+
+https://www.youtube.com/watch?v=p-Lf72QoRxs&list=PLXGQ7XfCauHuvNf1R_w5tMUTrHFL8GUek 6
+
+https://www.youtube.com/watch?v=YRYsXnfhfuc&list=PLUDwpEzHYYLtrdDyf3z-0fybtHNcqAdj5 7
+
+IntelliJ
+https://www.youtube.com/watch?v=t8T5Qwa5d_o&list=PLhW3qG5bs-L94pyVnP6YysYQ0_PfvqTQ3
+https://www.youtube.com/watch?v=YGCdPzhvOek
+https://www.youtube.com/watch?v=nEI88JI6HII
+https://www.youtube.com/watch?v=mtc-xQahqSs
+https://www.youtube.com/watch?v=LGBY3YnMveY&list=PL9ok7C7Yn9A8U18twexWoJxEzhtn9yBtz
+
+sel rp
+https://www.youtube.com/watch?v=7Gg-n9UU92k&list=PLhW3qG5bs-L_zQUmcXPs0F_e159DZ8OrP
+==================
+git init
+git status
+git add text1.txt or git add *  (staging area)
+git add -A
+git commit -m "commit msg"
+git branch -M "main/master"
+git remote add origin "git repo url"
+git push -u origin/repo url main
+git reset(to remove files from staging area)
+git pull
+touch .gitignore
+ls -la
+
+-vi gitignore to edit file
+insert
+.idea/
+*.log
+press esc, :wq to save file
+
+in case using multi repo than need to do set repo url for pushing code
+git remote set -url origin "git repourl"
+
+==================
+Download and install GIT
+-https://git-scm.com/downloads
+-git bash
+git version
+
+-cmd---move to git location and open cmd and check git version
+
+-first git commit
+create new project > open deom project in file explorer> git bash here from right click
+or open git bash and change the directory eg. cd /c/
+
+git status
+not a git repository
+
+-inorder to initialize git repo
+git init 
+.git folder is created
+
+-git status
+
+-make any changes to project from ide
+
+-git status---now it shows untracked files
+
+-git add filename than git status 
+
+git add text1.txt or git add *
+git add -A
+
+now it shows as new file instead of untracked
+
+-add any file manually from file explorer and check git status
+it shows untracked file
+
+-if we add anything to file and check git status
+it shows as modified
+
+-inorder to do commit add global username and email
+git config --global user.name "PJ"
+git config --global user.email "PJ.abc.com"
+
+-git config --global --list
+
+-git commit -m "first commit"
+in this it commit all local machine changes ti local repository
+
+-git branch -M master
+to change branch local repo
+
+-How to push code to remote repository
+sign up for GitHub
+
+-New repo/create repo on GitHub
+
+-enter below on local repo
+git remote add origin "git repo url"
+
+git branch -M main
+
+git status
+
+-git push -u origin main
+it will ask for authentication 
+usrpwd not working used token
+
+-how to generate token
+profile > settings > developer > personal access token > generate token
+
+-git push -u origin main
+enter token it will push code to remote repo
+
+-git reset
+to remove files from staging area ie. invert of add step
+
+-touch .gitignore
+
+ls -la
+
+-vi gitignore to edit file
+insert
+.idea/
+*.log
+press esc, :wq to save file
+
+==================================
+How to clone GitHub repo
+-created a folder in window machine where u need to clone project
+git clone "repo url"
+
+
+--------------------------
+azure crnt proj
+ssh-keygen -t ed25519 -C "your_email@example.com"
+
+
+steps
+1- generate ssh key with git bash
+2- add key in azure url
+https://dev.azure.com/RocheIConnect/_git/ICONNECT_CM_TRN_10?path=%2F&version=GBmaster&_a=contents
+
+3-git bash clone
+git clone https://dev.azure.com/RocheIConnect/_git/ICONNECT_CM_TRN_10?path=%2F&version=GBmaster&_a=contents
+
+git config "--global" core.longpaths true
+
+=========================================
+SDET1 added 1 file modified 1 file ====status---add---commit--push
+SDEt2 added 2 file modified 2 file===pull---status---add---commit---push
+
+SDET1 push code to master
+
+SDET now has to pull latest code along with his own changes
+git pull
+it will merge all changes present in remote repo to local repo
+=======================================
+
+first time add
+new project > git init > git status > git commit
+
+git remote add origin "repo url"
+
+token add
+
+git push -u origin main
+----------------------------------------------
+cloning
+
+add folder > git clone "repo url for cloning"
+
+=====================================================
+git pull
+
+===================================================
+branching
+first take pull
+git pull
+
+to create new branch
+git branch <feature_abc>
+
+switch to a branch
+git checkout <feature abc>
+
+to create new branch and switch to it immedicately
+git checkout -b <feature_abc>
+
+git commit -m ""
+
+git push origin feature_abc
+
+
+pull request > add pull request
+
+merge pull request
+delete branch
+
+==================================================== 
+imp commands
+new folder
+git config --global user.email ""
+git config --global user.name ""
+
+git init
+add file1
+git status
+git add *.txt, ., file1
+git commit -m "added file 1"
+git remote add origin "repo url"
+git push -u origin master
+git log
+
+
+if we create new branch
+git branch qa
+add file2
+git add file2
+git commit -m "added second file"
+git push -u origin qa---it will create 2nd branch on remote repo
+git checkout master
+git merge qa
+git push -u origin master
+git branch -d qa(delete from local)
+git push origin --delete qa(delete from remote)
+
+
+checkout branch where we want to make tag
+git tag v1.0
+git tag
+git log
+git show v1.0
+annotated tag  git -a tag v1.2 -m "Why this tag created"
+push tag git push origin tag v1.0
+
+delete tag- git tag -d v1.0(local), git push origin --delete v1.0(remote)
+
+we cannot checkout tags in git, we can create branch from a tag and checkout branch
+git checkout -b Release1 v1.0
+
+creating tags from past commit
+git tag v1.3 "checksum/ref"
+
+
+
+
+
+
+
